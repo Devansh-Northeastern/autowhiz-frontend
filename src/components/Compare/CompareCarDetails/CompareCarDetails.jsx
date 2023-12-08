@@ -19,11 +19,6 @@ export default function CompareCarDetails({ carDetails }) {
     <>
       <Stack gap={3}>
         <div className="container-car">
-          <img
-            src={carDetails.images[0]}
-            alt="car1"
-            className="car-image"
-          ></img>
         </div>
         <div className="alignleft">
           <span className="name">{carDetails.name + ' - '}</span>

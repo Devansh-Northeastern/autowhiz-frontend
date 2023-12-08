@@ -24,6 +24,7 @@ function Navigation() {
     setShowSignUp(true);
   };
   const logout = () => {
+    window.location.href = '/';
     window.localStorage.removeItem('email');
     window.localStorage.removeItem('isAdmin');
     setLoggedInUserEmail(null);
@@ -84,7 +85,7 @@ function Navigation() {
                   My Bookings
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4" onClick={logout}>
+                <NavDropdown.Item onClick={logout}>
                   Logout {window.localStorage.getItem('email')}
                 </NavDropdown.Item>
               </NavDropdown>

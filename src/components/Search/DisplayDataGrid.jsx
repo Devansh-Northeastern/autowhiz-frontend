@@ -371,7 +371,7 @@ function DisplayDataGrid({ filters }) {
                     </Button>
                   </OverlayTrigger>
 
-                  <OverlayTrigger
+                  {isAdmin && (<OverlayTrigger
                     placement="top"
                     overlay={<Tooltip id="edit-tooltip">edit</Tooltip>}
                   >
@@ -383,7 +383,7 @@ function DisplayDataGrid({ filters }) {
                         <PencilFill />
                       </Button>
                     </Link>
-                  </OverlayTrigger>
+                  </OverlayTrigger>)}
 
                   {isAdmin && (
                     <OverlayTrigger
