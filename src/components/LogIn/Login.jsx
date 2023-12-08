@@ -47,7 +47,7 @@ function Login({ onShowSignUp, onSuccessLogin }) {
         };
 
         await axios.post(
-          'http://localhost:4000/users/login',
+          'https://autowiz-backend1.onrender.com/users/login',
           loginData,
           {
             headers: {
