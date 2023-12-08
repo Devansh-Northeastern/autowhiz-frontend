@@ -19,11 +19,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<Search />} />
-          <Route path="edit" element={<VieworEdit />} />
-          <Route path="view" element={<VieworEdit />} />
-          <Route path="compare" element={<Compare />} />
+          <Route path="/edit" element={<VieworEdit />} />
+          <Route path="/view" element={<VieworEdit />} />
+          <Route path="/compare" element={<Compare />} />
           <Route path="/sell" element={<SellCar />} />
-          <Route path="login" element={<Login />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/allbookings" element={<AllBookings />} />
           <Route path="/profile" element={<Profile />}>
             <Route path="/profile/userdetails" element={<UserDetails />} />
