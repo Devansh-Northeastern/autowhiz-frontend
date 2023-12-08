@@ -196,7 +196,7 @@ function SellCar() {
 
         console.log('Json to be sent', carData);
         axios
-          .post('http://localhost:4000/cars/create', carData)
+          .post('https://autowiz-backend1.onrender.com/cars/create', carData)
           .then((response) => {
             console.log('API response:', response.data);
             setbShow(true);

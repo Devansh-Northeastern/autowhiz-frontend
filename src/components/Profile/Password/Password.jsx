@@ -55,7 +55,7 @@ export default function UserProile() {
           oldPassword: currentPassword,
           newPassword: newPassword
         }
-        const response = await axios.put('http://localhost:4000/users/edit', payload, {
+        const response = await axios.put('https://autowiz-backend1.onrender.com/users/edit', payload, {
           headers: {
             "Content-Type": "application/json"
           }

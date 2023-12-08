@@ -30,7 +30,7 @@ function Wishlist() {
       };
 
       await axios.put(
-        'http://localhost:4000/users/deleteFromWishlist',
+        'https://autowiz-backend1.onrender.com/users/deleteFromWishlist',
         payload
       ).then((res) => {
         window.location.reload();
@@ -47,7 +47,7 @@ function Wishlist() {
       };
 
       const response = await axios.post(
-        'http://localhost:4000/users/getWishlist',
+        'https://autowiz-backend1.onrender.com/users/getWishlist',
         payload
       ).then((res) => {
         console.log(res.data);

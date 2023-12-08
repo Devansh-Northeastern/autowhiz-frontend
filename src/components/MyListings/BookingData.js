@@ -66,7 +66,7 @@ function BookingData({ bid, cid, curruser }) {
     // Fetch data from the API
 
     axios
-      .get('http://localhost:4000/cars/getAll') // Replace with your actual API endpoint
+      .get('https://autowiz-backend1.onrender.com/cars/getAll') // Replace with your actual API endpoint
       .then((response) => {
         setCarsCollection(response.data);
       })
@@ -77,7 +77,7 @@ function BookingData({ bid, cid, curruser }) {
     console.log('INSIDE USE EFFECT', carsCollection);
 
     axios
-      .get('http://localhost:4000/users/getAll') // Replace with your actual API endpoint
+      .get('https://autowiz-backend1.onrender.com/users/getAll') // Replace with your actual API endpoint
       .then((response) => {
         setUsers(response.data);
       })
@@ -86,7 +86,7 @@ function BookingData({ bid, cid, curruser }) {
       });
 
     axios
-      .get('http://localhost:4000/bookings/getAll') // Replace with your actual API endpoint
+      .get('https://autowiz-backend1.onrender.com/bookings/getAll') // Replace with your actual API endpoint
       .then((response) => {
         setBookingsToDisplay(response.data);
       })
@@ -118,7 +118,7 @@ function BookingData({ bid, cid, curruser }) {
 
     try {
       const response = await axios.put(
-        `http://localhost:4000/bookings/edit/${bookingToCancel._id}`,
+        `https://autowiz-backend1.onrender.com/bookings/edit/${bookingToCancel._id}`,
         requestData
       );
       console.log('Update successful:', response.data, bookingId);
@@ -129,7 +129,7 @@ function BookingData({ bid, cid, curruser }) {
 
       // Fetch updated data after successful cancellation
       axios
-        .get('http://localhost:4000/bookings/getAll')
+        .get('https://autowiz-backend1.onrender.com/bookings/getAll')
         .then((response) => {
           setBookingsToDisplay(response.data);
         })

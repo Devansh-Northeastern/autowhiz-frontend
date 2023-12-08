@@ -46,7 +46,7 @@ export default function UserDetails() {
     try {
       const email = window.localStorage.getItem('email')
 
-      await axios.delete(`http://localhost:4000/users/deleteUser/${email}`).then((res) => {
+      await axios.delete(`https://autowiz-backend1.onrender.com/users/deleteUser/${email}`).then((res) => {
         window.location.href = '/';
         localStorage.clear();
     });
@@ -75,7 +75,7 @@ export default function UserDetails() {
       };
 
       await axios.put(
-        'http://localhost:4000/users/editUser',
+        'https://autowiz-backend1.onrender.com/users/editUser',
         payload
       ).then((res) => {
         console.log(res);

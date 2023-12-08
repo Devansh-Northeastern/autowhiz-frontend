@@ -44,7 +44,7 @@ function DisplayDataGrid({ filters }) {
     // Fetch CarsCollection from the API endpoint
     const fetchCarsCollection = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/cars/getAll'); // Replace with your API endpoint
+        const response = await axios.get('https://autowiz-backend1.onrender.com/cars/getAll'); // Replace with your API endpoint
         setCarsCollection(response.data); // Assuming the response is an array of cars
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -97,7 +97,7 @@ function DisplayDataGrid({ filters }) {
       };
 
       await axios.put(
-        'http://localhost:4000/users/addToWishlist',
+        'https://autowiz-backend1.onrender.com/users/addToWishlist',
         payload
       ).then((res) => {
         console.log(res.data);
@@ -125,7 +125,7 @@ function DisplayDataGrid({ filters }) {
     try {
       // Make an API call to delete the car
       await axios.delete(
-        `http://localhost:4000/cars/delete/${carToDelete.id}`
+        `https://autowiz-backend1.onrender.com/cars/delete/${carToDelete.id}`
       );
 
       // If the API call is successful, update the state or perform other actions
@@ -142,7 +142,7 @@ function DisplayDataGrid({ filters }) {
 
       // You might want to refresh the cars displayed on the page
       // For example, you can refetch the updated list of cars from the server
-      const updatedCars = await axios.get('http://localhost:4000/cars/getAll');
+      const updatedCars = await axios.get('https://autowiz-backend1.onrender.com/cars/getAll');
       setCarsCollection(updatedCars.data);
       console.error('SUCCESS deleting car:', updatedCars.data);
     } catch (error) {

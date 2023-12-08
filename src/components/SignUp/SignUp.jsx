@@ -55,7 +55,7 @@ function SignUp({ onShowLogin, onSuccessSignUp }) {
 
     try {
       const response = await axios.post(
-        'http://localhost:4000/users/create',
+        'https://autowiz-backend1.onrender.com/users/create',
         signUpData,
         {
           headers: {

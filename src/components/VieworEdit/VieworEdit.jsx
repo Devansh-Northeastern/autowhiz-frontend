@@ -80,7 +80,7 @@ function VieworEdit() {
 
   const getBookingDays = async () => {
     const carId = carData.id;
-    const endpoint = `http://localhost:4000/bookings/getAll`;
+    const endpoint = `https://autowiz-backend1.onrender.com/bookings/getAll`;
     const response = await axios.get(endpoint);
 
     const bookings = response.data;
@@ -193,7 +193,7 @@ function VieworEdit() {
 
         try {
           const response = await axios.put(
-            `http://localhost:4000/cars/edit/${carId}`,
+            `https://autowiz-backend1.onrender.com/cars/edit/${carId}`,
             requestData
           );
           console.log('Update successful:', response.data, carId);
@@ -230,7 +230,7 @@ function VieworEdit() {
         };
 
         axios
-          .post('http://localhost:4000/bookings/create', bookingData)
+          .post('https://autowiz-backend1.onrender.com/bookings/create', bookingData)
           .then((response) => {
             console.log('API response:', response.data);
 
